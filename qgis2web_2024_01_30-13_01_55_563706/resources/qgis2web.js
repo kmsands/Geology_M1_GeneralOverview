@@ -37,7 +37,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-map.getView().fit([13684018.529163, -1973091.126765, 13695836.902592, -1966194.597963], map.getSize());
+map.getView().fit([13686113.730860, -1972024.991873, 13692022.667796, -1968576.530032], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -78,7 +78,7 @@ var featureOverlay = new ol.layer.Vector({
 });
 
 var doHighlight = false;
-var doHover = false;
+var doHover = true;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
