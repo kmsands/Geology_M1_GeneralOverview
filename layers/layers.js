@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:7851").setExtent([490696.237651, 8069504.766884, 501604.618906, 8076180.294676]);
+//ol.proj.get("EPSG:7851").setExtent([491361.280834, 8069584.237452, 502269.662089, 8076259.765245]);
 var wms_layers = [];
 
 
@@ -39,7 +39,7 @@ var lyr_Roads_2 = new ol.layer.Vector({
                 source:jsonSource_Roads_2, 
                 style: style_Roads_2,
                 popuplayertitle: "Roads",
-                interactive: false,
+                interactive: true,
                     title: '<img src="styles/legend/Roads_2.png" /> Roads'
                 });
 var format_DisturbanceOutline_3 = new ol.format.GeoJSON();
@@ -69,7 +69,7 @@ var lyr_HeritageExlcusionZone_4 = new ol.layer.Vector({
                 source:jsonSource_HeritageExlcusionZone_4, 
                 style: style_HeritageExlcusionZone_4,
                 popuplayertitle: "Heritage Exlcusion Zone",
-                interactive: true,
+                interactive: false,
                     title: '<img src="styles/legend/HeritageExlcusionZone_4.png" /> Heritage Exlcusion Zone'
                 });
 var format_ThunderbirdHillsArea_5 = new ol.format.GeoJSON();
@@ -84,7 +84,7 @@ var lyr_ThunderbirdHillsArea_5 = new ol.layer.Vector({
                 source:jsonSource_ThunderbirdHillsArea_5, 
                 style: style_ThunderbirdHillsArea_5,
                 popuplayertitle: "Thunderbird Hills Area",
-                interactive: true,
+                interactive: false,
                     title: '<img src="styles/legend/ThunderbirdHillsArea_5.png" /> Thunderbird Hills Area'
                 });
 var format_TOPLLocalities_6 = new ol.format.GeoJSON();
@@ -134,10 +134,10 @@ lyr_TOPLLocalities_6.set('fieldImages', {'id': 'TextEdit', 'name': 'TextEdit', '
 lyr_ArtefactSites_7.set('fieldImages', {'id': 'TextEdit', 'name': 'TextEdit', 'artefact': 'TextEdit', 'altLabel': '', });
 lyr_Roads_2.set('fieldLabels', {'name': 'hidden field', 'type': 'hidden field', 'project': 'hidden field', 'length': 'hidden field', 'display': 'hidden field', 'id': 'hidden field', });
 lyr_DisturbanceOutline_3.set('fieldLabels', {'fid': 'no label', 'Name': 'no label', 'Area (ha)': 'no label', });
-lyr_HeritageExlcusionZone_4.set('fieldLabels', {'id': 'hidden field', 'name': 'no label', });
-lyr_ThunderbirdHillsArea_5.set('fieldLabels', {'id': 'hidden field', 'name': 'no label', });
-lyr_TOPLLocalities_6.set('fieldLabels', {'id': 'hidden field', 'name': 'no label', 'locality': 'hidden field', });
-lyr_ArtefactSites_7.set('fieldLabels', {'id': 'hidden field', 'name': 'hidden field', 'artefact': 'hidden field', 'altLabel': 'no label', });
+lyr_HeritageExlcusionZone_4.set('fieldLabels', {'id': 'hidden field', 'name': 'inline label - always visible', });
+lyr_ThunderbirdHillsArea_5.set('fieldLabels', {'id': 'hidden field', 'name': 'inline label - always visible', });
+lyr_TOPLLocalities_6.set('fieldLabels', {'id': 'hidden field', 'name': 'inline label - always visible', 'locality': 'hidden field', });
+lyr_ArtefactSites_7.set('fieldLabels', {'id': 'hidden field', 'name': 'hidden field', 'artefact': 'hidden field', 'altLabel': 'inline label - always visible', });
 lyr_ArtefactSites_7.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
