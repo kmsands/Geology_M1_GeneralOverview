@@ -90,10 +90,13 @@ var map = new ol.Map({
 
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
+layerSwitcher.hidePanel = function() {};
+layerSwitcher.showPanel();
+
 
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([491361.280834, 8069584.237452, 502269.662089, 8076259.765245], map.getSize());
+map.getView().fit([494631.076480, 8072580.068769, 498016.940984, 8074248.950717], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
